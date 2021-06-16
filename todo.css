@@ -1,0 +1,40 @@
+.jumbotron-body{
+    text-align: center;
+    margin: 2px;
+    font-family:serif;
+    background-color:rgb(216, 221, 240);
+    margin-top: 0px;
+}
+
+.input {
+    line-height: 30px;
+    width: 70%;
+    border-radius: 1px;
+    padding: 5px;
+    margin: 6px;
+    background-color: rgb(245, 245, 247);
+}
+
+.todo-list{
+    text-align: left;
+    margin-left: 11%;
+    width: 76%;
+    background-color:rgb(216, 221, 240);
+    padding: 5px;
+}
+
+.task-item{
+        background-color: rgb(175, 188, 236);
+        padding: 10px;
+        margin: 2px;
+        border-radius: 3px;
+}
+
+.icons{
+    height: 20px;
+    width: 30px;
+}
+.button-group{
+    border: none;
+    background-color: rgb(224, 225, 228);
+}
