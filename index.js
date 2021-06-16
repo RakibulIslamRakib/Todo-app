@@ -1,7 +1,4 @@
 
-
-//let addButton = document.getElementById('addTask');
-
 function addTodo(){
     let input = document.getElementById('todoItem')
     let newTodo = input.value;
@@ -15,15 +12,16 @@ function addTodo(){
     let oldTodos=JSON.parse(localStorage.getItem('todoList'));
     oldTodos.push(todoObj);
     input.value=null;
-
-    let li = document.createElement('li');
-    li.innerHTML=todoObj.taskName;
-    li.className="task-item";
-    document.querySelector('.todo-list').append(li);
-
+    addItem(todoObj.taskName);
     localStorage.setItem('todoList',JSON.stringify(oldTodos));
 }
 
+function addItem(task){
+    let li = document.createElement('li');
+    li.innerHTML=task;
+    li.className="task-item";
+    document.querySelector('.todo-list').append(li);
+}
 
 function viewTodos(){
     let todoList=[];
@@ -31,10 +29,7 @@ function viewTodos(){
         todoList=JSON.parse(localStorage.getItem('todoList'));
     }
     for(let todo in todoList){
-        let li = document.createElement('li');
-        li.innerHTML=todoList[todo].taskName;
-        li.className="task-item";
-        document.querySelector('.todo-list').append(li);
+        addItem(todoList[todo].taskName);
     }
 }    
 viewTodos();
