@@ -18,9 +18,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Complete</a>
-              <a class="nav-link" href="#">Incomplete</a>
+              <a class="nav-link active" aria-current="page" href="#"><button   class="searchButton" onclick = "home()">Home</button></a>
+              <a class="nav-link" href="#"><button   class="searchButton" onclick = "search()">Search</button></a>
             </div>
           </div>
         </div>
@@ -31,18 +30,26 @@
         <div >
           <h1><img src="media/todo.png" style="height: 45px;width: 60px;">Todo App</h1>
         </div>
-        <div class="input-form">
-          <h3 class="headLine">Add new Todo:</h3>
-          <input class="input" placeholder="add new todo" id="todoItem">
-          <button  onclick="addTodo();" class="btn btn-secondary">Add</button>
+        <div class="search" style="display: none;">
+          <h3 class="headLine">Search Todo:</h3>
+          <input class="input" placeholder="search todo" id="searchItem"    onkeyup = "searchTodo(this.value)">
+          <ol class="todo-search">  
+          </ol>
         </div>
-        <div class="update-form" style="display: none;">
-          <h3 class="headLine">Update Todo:</h3>
-          <input class="input" placeholder="update todo" id="updateItem">
-          <button  onclick="saveUpdate();" class="btn btn-secondary" id='saveUpdate'>Save</button>
-        </div>  
-        <ol class="todo-list">  
-        </ol>    
+        <div class="others">
+          <div class="input-form">
+            <h3 class="headLine">Add new Todo:</h3>
+            <input class="input" placeholder="add new todo" id="todoItem">
+            <button  onclick="addTodo();" class="btn btn-secondary">Add</button>
+          </div>
+          <div class="update-form" style="display: none;">
+            <h3 class="headLine">Update Todo:</h3>
+            <input class="input" placeholder="update todo" id="updateItem">
+            <button  onclick="saveUpdate();" class="btn btn-secondary" id='saveUpdate'>Save</button>
+          </div>  
+          <ol class="todo-list">  
+          </ol> 
+        </div>   
       </div>
     </div>  
     <script src="index.js"></script>
