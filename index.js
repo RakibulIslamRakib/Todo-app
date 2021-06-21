@@ -89,8 +89,35 @@ function viewTodos() {
     todoList = JSON.parse(localStorage.getItem('todoList'));
   }
 
-  for(let todo in todoList){
+  for(let todo in todoList) {
     addItem(todoList[todo],todo);
   }
   
 };    
+
+function search() {
+  document.querySelector('.others').style.display = 'none';
+  document.querySelector('.search').style.display = 'block';
+
+};
+
+function home() {
+  document.querySelector('.search').style.display = 'none';
+  document.querySelector('.others').style.display = 'block';
+};
+
+function searchTodo(input) {
+  document.querySelector('.todo-search').innerHTML = '';
+  let oldTodos = JSON.parse(localStorage.getItem('todoList'));
+  let len = oldTodos.length;
+  for(var i=0; i<len; i++){
+    if(((oldTodos[i].taskName).toLowerCase()).indexOf(input.toLowerCase())>-1){
+      var li = document.createElement("li");
+      var val = document.createTextNode(oldTodos[i].taskName);
+      li.appendChild(val);
+  
+      document.querySelector('.todo-search').appendChild(li);
+    }
+  }
+};
+
