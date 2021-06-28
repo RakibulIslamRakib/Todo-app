@@ -2,39 +2,69 @@
     text-align: center;
     margin: 2px;
     font-family:serif;
-    background-color:rgb(216, 221, 240);
-    margin-top: 0px;
+    margin-top: 1px;
 }
 
 .input {
-    line-height: 30px;
-    width: 70%;
-    border-radius: 1px;
-    padding: 5px;
-    margin: 6px;
-    background-color: rgb(245, 245, 247);
+    margin-bottom:none;
+    width: 60%;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: rgb(245, 245, 240);
+    margin-top: 10px;
 }
 
 .todo-list{
-    text-align: left;
-    margin-left: 11%;
-    width: 76%;
-    background-color:rgb(216, 221, 240);
+    margin-top: 20px;
+    margin-left: 12%;
+    width: 80%;
+    height: auto;
     padding: 5px;
 }
 
 .task-item{
-        background-color: rgb(175, 188, 236);
-        padding: 10px;
-        margin: 2px;
+        background-color: rgb(240, 240, 240);
+        margin: 5px;
         border-radius: 3px;
+        height: 40px;
+        text-align: center;
+        font-size: 24px;
 }
+ol li button{
+    float: right;
+    margin-left:4px ;
+    margin-bottom:2px ;
+    right: 40%;
+}
+
 
 .icons{
     height: 20px;
     width: 30px;
 }
-.button-group{
-    border: none;
-    background-color: rgb(224, 225, 228);
+
+.appTitle{
+    height: 80px;
+    width: 100%;
+    text-align: çenter;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+.searchDiv{
+    width: 90%;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    height: 40px;
+
+}
+#searchItem{
+    width: 30%;
+    float: right;
+}
+
+.fas fa-check-circle{
+    font-size:30px;
+    color:green;
 }
